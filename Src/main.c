@@ -96,7 +96,6 @@ int main(void)
   MX_ADC_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_ADC_Init(&hadc);
 
   if(HAL_ADCEx_Calibration_Start(&hadc) != HAL_OK){
 	  Error_Handler();
@@ -106,6 +105,8 @@ int main(void)
   if(HAL_ADC_Start_DMA(&hadc, data, 5) != HAL_OK){
 	  Error_Handler();
   }
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
